@@ -26,9 +26,12 @@ RUN apt-get update\
 ##      libxt-dev \
       python-dev \
 ##      python3-dev \
-##      ruby-dev \
+      ruby-dev \
       mercurial \
-      checkinstall
+      checkinstall \
+      mysql-client \
+      libmysqlclient-dev
+
 
 RUN apt-get remove ${OPTS_APT}\
       vim \
@@ -45,10 +48,10 @@ RUN ./configure --with-features=huge \
             --disable-selinux \
             --enable-luainterp \
 ##            --enable-perlinterp \
-##            --enable-pythoninterp \
+            --enable-pythoninterp \
 ##            --enable-python3interp \
 ##            --enable-tclinterp \
-##            --enable-rubyinterp \
+            --enable-rubyinterp \
 ##           C言語?
 ##            --enable-cscope \
 ##         日本語入力に必要らしい   
