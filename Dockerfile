@@ -30,7 +30,10 @@ RUN apt-get update\
       mercurial \
       checkinstall \
       mysql-client \
-      libmysqlclient-dev
+      libmysqlclient-dev \
+      libghc-pcre-light-dev \
+      libpcrecpp0 \
+      libpcre3-dev
 
 
 RUN apt-get remove ${OPTS_APT}\
