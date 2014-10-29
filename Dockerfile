@@ -72,23 +72,5 @@ RUN checkinstall \
             --nodoc \
             --default
 
-
-RUN echo "Host github.com\n\
-  User git\n\
-  Port 22\n\
-  Hostname github.com\n\
-  IdentityFile ~/.ssh/id_rsa_github\n\
-  TCPKeepAlive yes\n\
-  IdentitiesOnly yes\n" >> /root/.ssh/config
-
-RUN echo "function share_history {\n\
-    history -a\n\
-    history -c\n\
-    history -r\n\
-}\n\
-PROMPT_COMMAND='share_history'\n\
-shopt -u histappend\n\
-export HISTSIZE=9999\n" >> /root/.bashrc
-
-ADD dotfiles.sh /root/
-
+RUN groupadd -g 1100 theo
+RUN useradd -s /bin/false -u 1100 -g theo -G sudo -d /home/theo theo
