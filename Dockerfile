@@ -20,7 +20,7 @@ RUN apt-get update\
       libgmp-dev\
       libncursesw5\
       libtinfo5\
-      threadscopes
+      threadscope
 
 ## install llvm for the ghc backend
 RUN apt-get update\
