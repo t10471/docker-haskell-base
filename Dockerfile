@@ -36,9 +36,9 @@ RUN apt-get update\
       libpcre3-dev
 
 ## haskell package versions; can be overriden via context hacks
-ENV VERSION_ALEX   3.1.4
+ENV VERSION_ALEX   3.1.3
 ENV VERSION_CABAL  1.20
-ENV VERSION_HAPPY  1.19.5
+ENV VERSION_HAPPY  1.19.4
 
 ## install minimal set of haskell packages
 RUN apt-get update\
