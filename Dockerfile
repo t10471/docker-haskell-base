@@ -22,7 +22,7 @@ RUN apt-get update\
       libtinfo5\
       threadscope\
       libdevil-dev\
-      libtaoframework-devil1.6-cil\
+      libtaoframework-devil1.6-cil
 
 ## install llvm for the ghc backend
 RUN apt-get update\
